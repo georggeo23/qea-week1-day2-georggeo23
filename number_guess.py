@@ -51,6 +51,9 @@ print(f"Guess the number between {MIN_NUMBER} and {MAX_NUMBER}. "
 while True:
     answer = input("Guess (1-100): ").strip()
 
+    if not answer.isdigit():
+        print("Invalid input: please type a whole number.")
+        continue
 
     guess = int(answer)
     if guess < MIN_NUMBER or guess > MAX_NUMBER:
