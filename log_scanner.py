@@ -80,7 +80,8 @@ for raw_line in log_text.splitlines():
 
 # ---- TODO 3: the verdict -------------------------------------------------------
 # verdict = "PASS" if error_count is 0, otherwise "FAIL"  (if / else)
-
+if error_count == 0:
+    verdict = "PASS"
 # ---- Summary (provided, except the two TODO lines) ----------------------------
 print()
 print("Log scan summary")
@@ -92,6 +93,10 @@ print(f"INFO: {info_count}")
 print(f"UNKNOWN: {unknown_count}")
 # TODO 4: if first_error_line > 0 print f"First ERROR: line {first_error_line}"
 #         else print "First ERROR: none"
-
+if first_error_line > 0:
+    print(f"First ERROR: line {first_error_line}")
+else:
+    print("First ERROR: none")
 # TODO 5: print f"Verdict: {verdict}"
+print(f"Verdict: {verdict}")
 
